@@ -1,8 +1,6 @@
 from urllib.request import urlopen
 import re
 
-print('Hello, world!')
-
 def AskBreakfast():
     breakfast = input("Hello there! What did you have for breakfast today? ")
     if breakfast == "" or breakfast == "Nothing":
