@@ -3,6 +3,14 @@ import re
 
 print('Hello, world!')
 
+def AskBreakfast():
+    breakfast = input("Hello there! What did you have for breakfast today? ")
+    if breakfast == "" or breakfast == "Nothing":
+        print("Nothing really? How are going to survive this day?")
+    else:
+        print("You had " + breakfast + " for breakfast? That sounds really disgusting!")
+
+
 url="https://www.timeanddate.de/"
 page=urlopen(url)
 
@@ -19,3 +27,5 @@ match_results_2 = re.search(pattern_2, html, re.IGNORECASE)
 title_2 = match_results_2.group()
 title_2 = re.sub("<.*?>", "", title_2)
 print("The current time is: " + title + ":" + title_2 )
+
+AskBreakfast()
