@@ -6,7 +6,16 @@ def AskBreakfast():
     if breakfast == "" or breakfast == "Nothing":
         print("Nothing really? How are going to survive this day?")
     else:
-        print("You had " + breakfast + " for breakfast? That sounds really disgusting!")
+        print("You had " + breakfast + " for breakfast? That sounds really awful! You disgust me!")
+
+def AskDinner():
+    dinner = input("What did you have for dinner? ")
+    if dinner == "" or dinner == "Nothing" and AskBreakfast == "" or AskBreakfast == "Nothing":
+        print("Nothing for breakfast and dinner? Are you trying to starve yourself?")
+    elif dinner == "" or dinner == "Nothing":
+        print("Nothing really? Are you on a diet?")
+    else:
+        print("You had " + dinner + " for dinner? That sounds terrible. Your food choices are really questionable! You need help!")
 
 
 url="https://www.timeanddate.de/"
@@ -27,3 +36,4 @@ title_2 = re.sub("<.*?>", "", title_2)
 print("The current time is: " + title + ":" + title_2 )
 
 AskBreakfast()
+AskDinner()
