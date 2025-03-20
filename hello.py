@@ -1,6 +1,15 @@
 from urllib.request import urlopen
 import re
 
+'''
+Function that asks you for your breakfast choice with input requests.
+
+Args:
+    None
+
+Returns:
+    None
+'''
 def AskBreakfast():
     breakfast = input("Hello there! What did you have for breakfast today? ")
     if breakfast == "" or breakfast == "Nothing":
@@ -8,6 +17,15 @@ def AskBreakfast():
     else:
         print("You had " + breakfast + " for breakfast? That sounds really awful! You disgust me!")
 
+'''
+Function that asks you for your breakfast choice with input requests.
+
+Args:
+    None
+
+Returns:
+    None
+'''
 def AskDinner():
     dinner = input("What did you have for dinner? ")
     if dinner == "" or dinner == "Nothing" and AskBreakfast == "" or AskBreakfast == "Nothing":
